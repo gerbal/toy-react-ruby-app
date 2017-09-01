@@ -1,17 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import DataInputs from "./DataInputs";
 
-import '../assets/styles/App.scss';
-
+import "../assets/styles/App.scss";
 
 const App = ({ name }) => {
   return (
-    <h1>Hello, {name}!</h1>
+    <div>
+      <DataInputs />
+    </div>
   );
 };
 
 App.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string
 };
 
 export default App;
