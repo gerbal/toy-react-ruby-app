@@ -20,8 +20,14 @@ export function updateCompanyDomain(domain) {
   };
 }
 
+export function sendError(error){
+  return {
+    type: RECEIVE_ERROR,
+    error
+  };
+}
+
 function receiveEmail(email) {
-  console.log(email)
   return {
     type: RECEIVE_EMAIL_ADDRESS,
     email
@@ -53,18 +59,24 @@ export function fetchEmail(name, domain) {
   };
 }
 
-export default function (state = { error: null }, action) {
+const initialValues = {
+  error: null,
+  name: '',
+  domain: ''
+};
+
+export default function (state = initialValues, action) {
   switch (action.type) {
     case UPDATE_NAME:
-      return { ...state, name: action.name };
+      return { ...state, name: action.name, error: null };
     case UPDATE_COMPANY_DOMAIN:
-      return { ...state, domain: action.domain };
+      return { ...state, domain: action.domain, error: null };
     case REQUEST_EMAIL_ADDRESS:
-      return { ...state, loading: true };
+      return { ...state, loading: true, error: null };
     case RECEIVE_EMAIL_ADDRESS:
       return { ...state, loading: false, email: action.email };
     case RECEIVE_ERROR:
-      return { ...state, loading: false, error: action.error };
+      return { ...state, loading: false, error: action.error, email: null };
     default:
       return state;
   }

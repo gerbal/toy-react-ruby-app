@@ -43,5 +43,7 @@ $ yarn test
 - run `$ npm run build` _or_ `$ yarn build`
 - run `ruby lib/app.rb` (We're using Puma by default)
 
+- OR run a local production build `yarn prod` to transpile JS and start a Sinatra server
+
 This creates a transpiled asset file (`bundle.js`) of your JS and CSS in the `lib/app/public/` directory. This is great for production, but not so hot for development workflow as you would need to transpile _every time_ you made a change to the JS.
 

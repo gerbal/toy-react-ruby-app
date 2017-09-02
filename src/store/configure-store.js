@@ -1,8 +1,11 @@
 import rootReducer from "../reducers";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 
 export default initialState => {
-  return createStore(rootReducer, initialState,  applyMiddleware(thunk));
+  return createStore(rootReducer, initialState,  compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  ));
 };
