@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CheckEmail should not trigger error callback if valid name and domain 1`] = `
+<CheckEmail
+  actions={
+    Object {
+      "fetchEmail": [Function],
+      "sendError": [Function],
+      "updateCompanyDomain": [Function],
+      "updateName": [Function],
+    }
+  }
+  email={
+    Object {
+      "domain": "",
+      "name": "",
+    }
+  }
+>
+  <div
+    className="container_1ftli6h"
+  >
+    <InputWithLabel
+      label="Full Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Full Name"
+        >
+          Full Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="FullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+    <InputWithLabel
+      label="Domain Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Domain Name"
+        >
+          Domain Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="DomainName"
+          onChange={[Function]}
+          placeholder="Domain Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+  </div>
+</CheckEmail>
+`;
+
+exports[`Component: CheckEmail should not trigger error callback if valid name and domain 2`] = `
+<CheckEmail
+  actions={
+    Object {
+      "fetchEmail": [Function],
+      "sendError": [Function],
+      "updateCompanyDomain": [Function],
+      "updateName": [Function],
+    }
+  }
+  email={
+    Object {
+      "domain": "",
+      "name": "",
+    }
+  }
+>
+  <div
+    className="container_1ftli6h"
+  >
+    <InputWithLabel
+      label="Full Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Full Name"
+        >
+          Full Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="FullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+    <InputWithLabel
+      label="Domain Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Domain Name"
+        >
+          Domain Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="DomainName"
+          onChange={[Function]}
+          placeholder="Domain Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+  </div>
+</CheckEmail>
+`;
+
+exports[`Component: CheckEmail should render the CheckEmail component 1`] = `
+<CheckEmail
+  actions={Object {}}
+  email={Object {}}
+>
+  <div
+    className="container_1ftli6h"
+  >
+    <InputWithLabel
+      label="Full Name"
+      onChange={[Function]}
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Full Name"
+        >
+          Full Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="FullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+        />
+      </div>
+    </InputWithLabel>
+    <InputWithLabel
+      label="Domain Name"
+      onChange={[Function]}
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Domain Name"
+        >
+          Domain Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="DomainName"
+          onChange={[Function]}
+          placeholder="Domain Name"
+        />
+      </div>
+    </InputWithLabel>
+  </div>
+</CheckEmail>
+`;
+
+exports[`Component: CheckEmail should trigger call an error an invalid domain 1`] = `
+<CheckEmail
+  actions={
+    Object {
+      "fetchEmail": [Function],
+      "sendError": [Function],
+      "updateCompanyDomain": [Function],
+      "updateName": [Function],
+    }
+  }
+  email={
+    Object {
+      "domain": "",
+      "name": "",
+    }
+  }
+>
+  <div
+    className="container_1ftli6h"
+  >
+    <InputWithLabel
+      label="Full Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Full Name"
+        >
+          Full Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="FullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+    <InputWithLabel
+      label="Domain Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Domain Name"
+        >
+          Domain Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="DomainName"
+          onChange={[Function]}
+          placeholder="Domain Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+  </div>
+</CheckEmail>
+`;
+
+exports[`Component: CheckEmail should trigger call an error with no domain 1`] = `
+<CheckEmail
+  actions={
+    Object {
+      "fetchEmail": [Function],
+      "sendError": [Function],
+      "updateCompanyDomain": [Function],
+      "updateName": [Function],
+    }
+  }
+  email={
+    Object {
+      "domain": "",
+      "name": "",
+    }
+  }
+>
+  <div
+    className="container_1ftli6h"
+  >
+    <InputWithLabel
+      label="Full Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Full Name"
+        >
+          Full Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="FullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+    <InputWithLabel
+      label="Domain Name"
+      onChange={[Function]}
+      value=""
+    >
+      <div
+        className="block_8osbox"
+      >
+        <label
+          className="inputLabel_1jzahh6"
+          htmlFor="Domain Name"
+        >
+          Domain Name
+        </label>
+        <input
+          className="inputs_eh1wt9"
+          id="DomainName"
+          onChange={[Function]}
+          placeholder="Domain Name"
+          value=""
+        />
+      </div>
+    </InputWithLabel>
+  </div>
+</CheckEmail>
+`;

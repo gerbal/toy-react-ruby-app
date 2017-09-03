@@ -13,7 +13,6 @@ import {
   sendError
 } from "../reducers/email-reducer";
 
-
 const styles = StyleSheet.create({
   container: {
     display: "flex",
@@ -46,7 +45,32 @@ const styles = StyleSheet.create({
   }
 });
 
-class DataInputs extends React.Component {
+const InputWithLabel = ({ onChange, value, label }) => {
+  return (
+    <div className={css(styles.block)}>
+      <label
+        className={css(styles.inputLabel)}
+        htmlFor={label}
+      >
+        {label}
+      </label>
+      <input
+        className={css(styles.inputs)}
+        id={label.replace(/\W/, '')}
+        onChange={onChange}
+        placeholder={label}
+        value={value}
+      />
+    </div>
+  );
+};
+InputWithLabel.propTypes = {
+  label: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string
+};
+
+export class CheckEmail extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,8 +92,10 @@ class DataInputs extends React.Component {
   };
 
   updateEmail = (name, domain) => {
-    if (this.validDomain(domain)){
+    if (this.validDomain(domain)) {
       this.props.actions.fetchEmail(name, domain);
+    } else if (!name) {
+      this.props.actions.sendError("Missing Name");
     } else {
       this.props.actions.sendError("Invalid Domain");
     }
@@ -82,36 +108,17 @@ class DataInputs extends React.Component {
   render() {
     return (
       <div className={css(styles.container)}>
-        <div className={css(styles.block)}>
-          <label 
-            className={css(styles.inputLabel)} 
-            htmlFor="name"
-          >
-            Full Name
-          </label>
-          <input
-            className={css(styles.inputs)}
-            id="name"
-            onChange={this.handleUpdateName}
-            placeholder={"Name"}
-            value={this.props.email.name}
-          />
-        </div>
-        <div className={css(styles.block)}>
-          <label 
-            className={css(styles.inputLabel)} 
-            htmlFor="domain"
-          >
-            Domain Name
-          </label>
-          <input
-            className={css(styles.inputs)}
-            id="domain"
-            onChange={this.handleUpdateDomain}
-            placeholder={"Domain Name"}
-            value={this.props.email.domain}
-          />
-        </div>
+        <InputWithLabel
+          label="Full Name"
+          onChange={this.handleUpdateName}
+          value={this.props.email.name}
+        />
+        <InputWithLabel
+          label="Domain Name"
+          onChange={this.handleUpdateDomain}
+          value={this.props.email.domain}
+        />
+
         {this.props.email.error && (
           <div className={css(styles.block)}>{this.props.email.error}</div>
         )}
@@ -121,9 +128,9 @@ class DataInputs extends React.Component {
       </div>
     );
   }
-};
+}
 
-DataInputs.propTypes = {
+CheckEmail.propTypes = {
   actions: PropTypes.object.isRequired,
   email: PropTypes.object.isRequired
 };
@@ -143,4 +150,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DataInputs);
+export default connect(mapStateToProps, mapDispatchToProps)(CheckEmail);

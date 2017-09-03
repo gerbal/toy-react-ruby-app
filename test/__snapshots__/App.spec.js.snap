@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: App should render the App component 1`] = `
+<div>
+  <Connect(CheckEmail) />
+</div>
+`;

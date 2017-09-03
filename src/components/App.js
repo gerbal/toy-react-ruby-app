@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import DataInputs from "./DataInputs";
-
-import "../assets/styles/App.scss";
+import CheckEmail from "./CheckEmail";
 
 const App = ({ name }) => {
   return (
     <div>
-      <DataInputs />
+      <CheckEmail />
     </div>
   );
 };
